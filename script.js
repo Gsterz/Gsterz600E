@@ -912,7 +912,7 @@ if (setTimeBox && adjustTimeBox) {
 
     const copyTime = setTime.substring(3);
 
-    setTimeBox.textContent = `Set - ${setTime}`;
+    setTimeBox.value = `Set - ${setTime}`;
 
     try {
       await navigator.clipboard.writeText(copyTime);
