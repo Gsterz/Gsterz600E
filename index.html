@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CHUSOMPING(E2)</title>
+  <title>CHUSOMPING(E3)</title>
   <!-- ✅ manifest 등록 -->
   <link rel="manifest" href="manifest.json" />
   <!-- ✅ TailwindCSS -->
@@ -36,7 +36,7 @@
   </button>
 
   <button id="tabSwitch" class="bg-gray-300 px-3 py-1 rounded">
-    Switching
+    Switch
   </button>
 
   <button id="tabTime" class="bg-gray-300 px-3 py-1 rounded">
@@ -48,7 +48,7 @@
   </button>
 
   <button id="tabMarch" class="bg-gray-300 px-3 py-1 rounded">
-    March(Input)
+    (Input)
   </button>
 
 </div>
@@ -62,7 +62,7 @@
   <!-- ✅ 쉬운 주유 Page -->
   <section class="bg-white p-4 rounded-lg shadow mb-6">
     <div class="flex justify-between items-center mb-4" style="max-width: 304px;">
-      <h2 class="font-semibold text-base whitespace-nowrap">◉ Refill(Sec)</h2>
+      <h2 class="font-semibold text-base whitespace-nowrap">◉ Auto</h2>
       <div class="flex gap-2">
         <button id="btnCopyExplain" class="bg-gray-300 px-3 py-1 rounded hover:bg-gray-400">Copy</button>
         <button id="btnCalcExplain" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Calculate</button>
@@ -83,7 +83,7 @@
   <!-- ✅ 지정 주유 Page -->
   <section class="bg-white p-4 rounded-lg shadow mb-6">
     <div class="flex justify-between items-center mb-4" style="max-width: 304px;">
-      <h2 class="font-semibold text-base whitespace-nowrap">◉ Refill(Personal)</h2>
+      <h2 class="font-semibold text-base whitespace-nowrap">◉ Manual</h2>
       <div class="flex gap-2">
         <button id="btnCopyExplain2" class="bg-gray-300 px-3 py-1 rounded hover:bg-gray-400">Copy</button>
         <button id="btnCalcExplain2" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Calculate</button>
@@ -105,12 +105,12 @@
     </div>
     <div class="space-y-2">
       <div class="flex items-center gap-2 overflow-x-auto whitespace-nowrap">
-        <label class="w-28 shrink-0 text-blue-600">Rally Remain</label>
+        <label class="w-24 shrink-0 text-blue-600">Rally Remain</label>
         <input id="rallyRemainTime" type="text" class="border rounded px-2 py-1 w-32 shrink-0 text-blue-600" placeholder="HH:mm:ss" inputmode="numeric" pattern="[0-9]*" />
         <button id="resetRallyRemainTime" class="bg-gray-300 px-2 py-1 rounded shrink-0">Reset</button>
       </div>
       <div class="flex items-center gap-2 overflow-x-auto whitespace-nowrap">
-        <label class="w-28 shrink-0 text-blue-600">Enemy March</label>
+        <label class="w-24 shrink-0 text-blue-600">Enemy March</label>
         <input id="enemyMarchTime" type="text" class="border rounded px-2 py-1 w-32 shrink-0 text-blue-600" placeholder="HH:mm:ss" inputmode="numeric" pattern="[0-9]*" />
         <button id="resetEnemyMarchTime" class="bg-gray-300 px-2 py-1 rounded shrink-0">Reset</button>
       </div>
@@ -170,7 +170,7 @@ Gangsterz35 솜30 쮸르46
   <!-- ✅ 쉬운 스위칭 Page -->
   <section class="bg-white p-4 rounded-lg shadow mb-6">
     <div class="flex justify-between items-center mb-4" style="max-width: 304px;">
-      <h2 class="font-semibold text-base whitespace-nowrap">◉ Switching(Sec)</h2>
+      <h2 class="font-semibold text-base whitespace-nowrap">◉ Auto</h2>
       <div class="flex gap-2">
         <button id="btnCopyExplain3" class="bg-gray-300 px-3 py-1 rounded hover:bg-gray-400">Copy</button>
         <button id="btnCalcExplain3" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Calculate</button>
@@ -191,7 +191,7 @@ Gangsterz35 솜30 쮸르46
   <!-- ✅ 지정 스위칭 Page -->
   <section class="bg-white p-4 rounded-lg shadow mb-6">
     <div class="flex justify-between items-center mb-4" style="max-width: 304px;">
-      <h2 class="font-semibold text-base whitespace-nowrap">◉ Switching(Personal)</h2>
+      <h2 class="font-semibold text-base whitespace-nowrap">◉ Manual</h2>
       <div class="flex gap-2">
         <button id="btnCopyExplain4" class="bg-gray-300 px-3 py-1 rounded hover:bg-gray-400">Copy</button>
         <button id="btnCalcExplain4" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Calculate</button>
@@ -224,7 +224,7 @@ Gangsterz35 솜30 쮸르46
 
     <div class="flex items-center gap-2 overflow-x-auto whitespace-nowrap">
       <label class="w-28 shrink-0 text-blue-600">
-        Target Switch time
+        Target time
       </label>
 
       <input id="switchingTime"
