@@ -875,6 +875,53 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+
+// Set Time
+const setTimeBox = document.getElementById("setTimeBox");
+const adjustTimeBox = document.getElementById("TargetUTCTime");
+
+if (setTimeBox && adjustTimeBox) {
+  setTimeBox.addEventListener("click", async () => {
+    const timeText = adjustTimeBox.textContent.trim();
+    const match = timeText.match(/(\d{2}):(\d{2}):(\d{2})/);
+
+    if (!match) return;
+
+    let hours = Number(match[1]);
+    let minutes = Number(match[2]);
+    let seconds = Number(match[3]);
+
+    // 다음 5초 단위로 올림
+    seconds = Math.ceil(seconds / 5) * 5;
+
+    // 분 / 시간 넘어가는 경우 처리
+    if (seconds >= 60) {
+      seconds = 0;
+      minutes++;
+    }
+
+    if (minutes >= 60) {
+      minutes = 0;
+      hours = (hours + 1) % 24;
+    }
+
+    const setTime =
+      `${String(hours).padStart(2, "0")}:` +
+      `${String(minutes).padStart(2, "0")}:` +
+      `${String(seconds).padStart(2, "0")}`;
+
+    const copyTime = setTime.substring(3);
+
+    setTimeBox.textContent = `Set - ${setTime}`;
+
+    try {
+      await navigator.clipboard.writeText(copyTime);
+    } catch (error) {
+      console.error("Copy failed:", error);
+    }
+  });
+}
+
   // =========================
   // 연집 계산
   // =========================
