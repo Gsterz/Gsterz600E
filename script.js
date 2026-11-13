@@ -735,7 +735,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      document.getElementById("explainStart31").textContent = "<스위칭> | 도착시간";
+      document.getElementById("explainStart31").textContent = "<스위칭> | 출발시간";
 
       const offsets = [60, 55, 50, 45, 40, 35, 30];
 
