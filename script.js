@@ -914,6 +914,10 @@ if (setTimeBox && adjustTimeBox) {
 
     setTimeBox.value = `Set - ${setTime}`;
 
+// Set - 검정색, 시간 파란색
+setTimeBox.classList.remove("text-gray-400");
+setTimeBox.classList.add("text-gray-900");
+
     try {
       await navigator.clipboard.writeText(copyTime);
     } catch (error) {
