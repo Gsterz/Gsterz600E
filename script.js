@@ -919,10 +919,19 @@ setTimeBox.classList.remove("text-gray-400");
 setTimeBox.classList.add("text-gray-900");
 
     try {
-      await navigator.clipboard.writeText(copyTime);
-    } catch (error) {
-      console.error("Copy failed:", error);
-    }
+  await navigator.clipboard.writeText(copyTime);
+
+  const rect = setTimeBox.getBoundingClientRect();
+
+  showCopyMessage(
+    copyTime,
+    rect.left + rect.width / 2,
+    rect.top
+  );
+
+} catch (error) {
+  console.error("Copy failed:", error);
+}
   });
 }
 
