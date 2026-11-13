@@ -882,7 +882,7 @@ const adjustTimeBox = document.getElementById("TargetUTCTime");
 
 if (setTimeBox && adjustTimeBox) {
   setTimeBox.addEventListener("click", async () => {
-    const timeText = adjustTimeBox.textContent.trim();
+   const timeText = adjustTimeBox.value.trim();
     const match = timeText.match(/(\d{2}):(\d{2}):(\d{2})/);
 
     if (!match) return;
